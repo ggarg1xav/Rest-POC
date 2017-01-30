@@ -4,3 +4,4 @@ target/*
 .settings/
 src/main/java/BizAPIHelper.java
 Helper-Help
+/target/
