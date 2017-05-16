@@ -15,6 +15,13 @@
         <version>2.4.1</version>
         <scope>compile</scope>
     </dependency>
+       <dependency>
+    <groupId>com.oracle</groupId>
+    <artifactId>ojdbc</artifactId>
+    <version>6</version>
+    <scope>system</scope>
+    <systemPath>${basedir}/ojdbc6.jar</systemPath> <!-- must match file name -->
+</dependency>
 
     <dependency>
         <groupId>org.testng</groupId>

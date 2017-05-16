@@ -1,6 +1,19 @@
+import static com.jayway.restassured.RestAssured.given;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.testng.annotations.Test;
 
 import com.jayway.restassured.http.ContentType;
+import com.jayway.restassured.specification.RequestSpecification;
+
+import oracle.jdbc.OracleConnection;
+import oracle.jdbc.pool.OracleDataSource;
 
 /**
  * Created by NMakkar on 1/18/2017.
@@ -22,4 +35,53 @@ public class test_RestAPI {
 		// Calling Method for API execution.
 		ApiHelper.test_api(Command, Input, ContentType.JSON, null, null);
 	}
+	
+	public static void main(String[] args) {
+
+	   /* // http://services.aonaware.com/DictService/DictService.asmx?op=Define
+	    // http://services.aonaware.com/DictService/DictService.asmx?wsdl
+		RequestSpecification reqspec;
+		reqspec = given().contentType("text/xml; charset=utf-8");
+		
+	   String  baseURI = "http://www.holidaywebservice.com";
+	    int port = 80;
+	    String word = "hand";
+
+	    String myEnvelope = "<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" " +
+	      "xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">" +
+	      "<soap12:Body>" +
+	      "<Define xmlns=\"http://services.aonaware.com/webservices/\">" +
+	      "<word>" + word + "</word>" +
+	      "</Define>" +
+	      "</soap12:Body>" +
+	      "</soap12:Envelope>";
+	    
+	    
+	    String myEnvelope = "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"http://www.holidaywebservice.com/HolidayService_v2/\">" + 
+ "<SOAP-ENV:Body>" + 
+   "<ns1:GetHolidaysAvailable>" + 
+     "<ns1:countryCode>UnitedStates</ns1:countryCode>" + 
+   "</ns1:GetHolidaysAvailable>" + 
+ "</SOAP-ENV:Body>" + 
+"</SOAP-ENV:Envelope>";
+	    
+	    Map<String, String> authhdrs = new HashMap<String, String>();
+	    authhdrs.put("SOAPAction", "Define");
+	    //authhdrs.put("Content-Length", Integer.toString( myEnvelope.length() ) );		
+	    String xml = reqspec.given().request()
+	      .body( myEnvelope )
+	      .when().post( "http://www.holidaywebservice.com//HolidayService_v2/HolidayService2.asmx?wsdl" ).andReturn().asString();
+		    
+	    //String prettyXML = with(xml).prettyPrint();	    
+	    System.out.println( xml );
+	    
+	    */
+		
+
+
+		
+	    
+	  
+	}
+	
 }
